@@ -23,10 +23,22 @@ Download the latest stable builds directly from GitHub:
 ## ✨ Features at a Glance
 
 * **⚡ Ultra Lightweight & Native:** Powered by Rust (Tauri) on Windows with sub-3 MB binary size and minimal RAM consumption, paired with an optimized Capacitor runtime for Android.
-* **✍️ Distraction-Free Markdown:** Full syntax highlighting, rich code formatting, tag grouping, and fast search.
-* **☁️ Private Cloud Synchronization:** Direct client-side Google Drive AppData sync without third-party servers or relay databases.
-* **🔒 Zero-Knowledge Vault:** Client-side cryptographic isolation for sensitive thoughts and notes.
-* **🛡️ Device-Level Security:** Hardware-backed biometric authentication (Fingerprint, Face Unlock, Windows Hello) and salted PIN lock.
+* **✍️️ Distraction-Free Markdown:** Full syntax highlighting, rich code formatting, tag grouping, and fast search.
+* **☁️ Client-Side Google Drive AppData Sync:** Seamless cross-device synchronization using your personal Google account. Zero intermediate servers, zero relay databases, and no monthly cloud subscriptions.
+* **🔒 Zero-Knowledge Vault:** Client-side cryptographic isolation for sensitive thoughts and notes powered by authenticated AES-256-GCM.
+* **🛡️️ Device-Level Security:** Hardware-backed biometric authentication (Fingerprint, Face Unlock, Windows Hello) and salted PIN lock.
+* **🤖 Smart On-Demand AI:** Built-in Gemini-powered note summarization and voice transcription triggered strictly by manual action.
+
+---
+
+## ⚡ The Breakthrough: Zero-Knowledge Google Drive AppData Sync
+
+Unlike conventional note-taking applications that lock your personal thoughts into closed third-party cloud servers or demand complicated self-hosted sync relays, **Vespera Notes** introduces a client-side **Google Drive AppData Sync** architecture:
+
+* 🔒 **Private AppData Sandbox:** Notes are stored exclusively inside your personal Google Drive's hidden `appDataFolder`. No outside servers, no third-party databases, and no monthly subscription fees.
+* 🛡️ **Client-Side Zero-Knowledge:** All data is processed directly on your device. We never run backend servers that can inspect, track, or index your content.
+* 🔄 **Seamless Cross-Device Continuity:** Seamlessly bridge your notes between Android and Windows whenever an internet connection is available, while retaining complete offline functionality.
+* 📦 **Total Data Sovereignty:** You own your data. Because sync files exist strictly inside your personal Google storage, your notes stay permanently in your custody.
 
 ---
 
@@ -50,6 +62,7 @@ Because **Vespera Notes** is distributed as a closed-source client, we uphold a 
 └───────────────────────────────┬────────────────────────────────────────┘
                                 │
                  OAuth Scope: drive.appdata ONLY
+            (Direct Client-to-Drive / Zero Relay)
                                 │
                                 ▼
               ┌───────────────────────────────────┐
@@ -85,9 +98,10 @@ For sensitive notes, Vespera Notes features a client-side encrypted Private Vaul
 
 When you choose to enable cloud sync:
 
-* **Isolated Application Data Folder (`drive.appdata`):** The app requests only the `[https://www.googleapis.com/auth/drive.appdata](https://www.googleapis.com/auth/drive.appdata)` OAuth scope. This means:
+* **Isolated Application Data Folder (`drive.appdata`):** The app requests only the `https://www.googleapis.com/auth/drive.appdata` OAuth scope. This means:
   * The app cannot view, list, read, or modify any existing files, photos, or documents in your personal Google Drive.
   * Sync data is stored in a hidden sandbox folder reserved exclusively for Vespera Notes.
+* **Direct Client-to-Cloud Transmission:** The client communicates directly with Google's official API endpoints. There are no intermediate reverse proxies, sync dispatchers, or relay nodes intercepting your payloads.
 * **End-to-End Vault Protection in the Cloud:** Hidden vault notes are encrypted client-side before being uploaded to Google Drive. Google and anyone inspecting your cloud storage only see ciphertext; they cannot read the note title, content, or tags.
 
 </details>
