@@ -13,10 +13,12 @@
 
 Download the latest stable builds directly from GitHub:
 
-| Platform | Recommended File | Target OS | Package Type |
+| Platform | Recommended Package | Target OS | Direct Download |
 | :--- | :--- | :--- | :--- |
-| **Android** | [`VesperaNotes-v1.0.2.apk`](https://github.com/VesperaLabs/Vespera-Notes-Releases/releases/latest) | Android 8.0+ (Oreo or later) | Direct APK Install |
-| **Windows** | [`VesperaNotes-Setup-v1.0.2.exe`](https://github.com/VesperaLabs/Vespera-Notes-Releases/releases/latest) | Windows 10 / 11 (64-bit) | NSIS Native Installer |
+| **Android** | `VesperaNotes-Latest.apk` | Android 8.0+ (Oreo or later) | [📥 Download Latest APK](https://github.com/VesperaLabs/Vespera-Notes-Releases/releases/latest/download/VesperaNotes-v1.0.3.apk) |
+| **Windows** | `VesperaNotes-Setup-Latest.exe` | Windows 10 / 11 (64-bit) | [📥 Download Windows Setup](https://github.com/VesperaLabs/Vespera-Notes-Releases/releases/latest) |
+
+> 💡 *To browse all historical versions and detailed release notes, check the [All Releases](https://github.com/VesperaLabs/Vespera-Notes-Releases/releases) archive.*
 
 ---
 
